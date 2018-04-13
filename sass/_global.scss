@@ -48,6 +48,16 @@ $lato: 'Lato', sans-serif;
     }
 }
 
+.h2-grey-light {
+    font-family: $mont;
+    font-size: 1.5rem;
+    color: #c4c4c4;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 2rem;
+    }
+}
+
 .p-white {
     font-family: $lato;
     font-size: 1rem;
@@ -82,10 +92,33 @@ $lato: 'Lato', sans-serif;
     }
 }
 
+.span-title-white {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
 .cta {
     font-family: $lato;
     font-size: 1rem;
     color: $light-blue;
+    margin: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.cta-grey-light {
+    font-family: $lato;
+    font-size: 1rem;
+    color: #c4c4c4;
     margin: 0;
     text-transform: uppercase;
     @media screen and (min-width: 40rem) {

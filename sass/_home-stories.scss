@@ -1,0 +1,20 @@
+.home-stories-img-wrap {
+    background: url("../images/biz_guy.jpg") no-repeat center/cover;
+    height: 260px;
+}
+
+.home-stories-text-wrap {
+    background: $dark-blue;
+    padding: 30px 15px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 42%;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
