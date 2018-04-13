@@ -1,0 +1,41 @@
+.home-why {
+    padding: 30px 15px;
+    @media screen and(min-width: 62rem) {
+        padding: 120px 15px;
+    }
+    h2 {
+        margin-bottom: 30px;
+        @media screen and(min-width: 62rem) {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        bottom: auto;
+        top: 28%;
+        @media screen and(min-width: 40rem) {
+            top: 36%;
+        }
+        @media screen and(min-width: 62rem) {
+            position: static;
+            top: auto;
+            left: -10%;
+        }
+    }
+    .p-grey {
+        margin-bottom: 15px;
+        @media screen and(min-width: 62rem) {
+            margin: 30px 0;
+        }
+    }
+    .p-grey,
+    .cta {
+        padding-left: 15px;
+    }
+}
+
+.home-why-gutter {
+    background: $light-blue;
+}

@@ -1,0 +1,107 @@
+//colours
+$light-blue: #5fa9a9;
+$dark-blue: #026a74;
+
+//position
+@mixin center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//fonts
+$mont: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
+
+.h1 {
+    font-family: $mont;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 62rem) {
+        font-size: 3rem;
+    }
+}
+
+.h2-blue {
+    font-family: $mont;
+    font-size: 1.5rem;
+    color: $dark-blue;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 2rem;
+    }
+}
+
+.h2-grey {
+    font-family: $mont;
+    font-size: 1.5rem;
+    color: #959595;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 2rem;
+    }
+}
+
+.p-white {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.p-grey {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #959595;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.span-title {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #323232;
+    margin: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
+.cta {
+    font-family: $lato;
+    font-size: 1rem;
+    color: $light-blue;
+    margin: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
+//hr
+@mixin left-hr {
+    content: "";
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    @media screen and (min-width: 62rem) {
+        width: 120px;
+    }
+}

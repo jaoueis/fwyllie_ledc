@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sjiang
- * Date: 4/10/2018
- * Time: 11:08 AM
- */
+
+include('sections/header.html');
+include('sections/home-banner.html');
+include('sections/home-why.html');
+
+?>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/header.js"></script>
+</body>
+</html>
