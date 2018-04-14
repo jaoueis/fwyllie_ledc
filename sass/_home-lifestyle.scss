@@ -1,0 +1,37 @@
+.home-lifestyle-wrap {
+    background: $dark-blue;
+}
+
+.home-lifestyle {
+    padding: 30px 15px;
+    @media screen and (min-width: 62rem) {
+        padding: 120px 15px 60px 15px;
+    }
+    h2 {
+        margin-bottom: 30px;
+        @media screen and (min-width: 62rem) {
+            margin-bottom: 15px;
+        }
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 32%;
+        @media screen and (min-width: 40rem) {
+            top: 40%;
+        }
+        @media screen and (min-width: 62rem) {
+            position: static;
+        }
+    }
+    p {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        @media screen and (min-width: 62rem) {
+            margin-top: 15px;
+        }
+    }
+    .cta-grey-light {
+        padding-left: 15px;
+    }
+}

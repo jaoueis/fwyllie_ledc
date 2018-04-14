@@ -22,7 +22,7 @@
         padding-left: 15px;
     }
     @media screen and (min-width: 64rem) {
-        margin: 120px auto;
+        margin: 120px auto 60px auto;
     }
 }
 
@@ -32,18 +32,29 @@
         width: 100%;
     }
     @media screen and (min-width: 64rem) {
-        margin: 120px auto;
+        margin: 120px auto 60px auto;
     }
 }
 
 .quote-wrap {
-    padding: 30px 15px;
-    background: $light-blue;
     text-align: center;
+    padding: 0;
+    .quote {
+        padding: 30px 15px;
+        background: $light-blue;
+    }
     p {
         margin-bottom: 15px;
     }
     span {
         text-transform: none;
+    }
+    @media screen and (min-width: 62rem) {
+        height: 156px;
+        .quote {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 60px;
+        }
     }
 }

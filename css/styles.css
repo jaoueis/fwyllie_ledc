@@ -362,7 +362,7 @@ body.no-scroll {
     padding-left: 15px; }
   @media screen and (min-width: 64rem) {
     .home-careers-text-wrap {
-      margin: 120px auto; } }
+      margin: 120px auto 60px auto; } }
 
 .home-careers-img-wrap {
   margin-bottom: 30px; }
@@ -370,13 +370,62 @@ body.no-scroll {
     width: 100%; }
   @media screen and (min-width: 64rem) {
     .home-careers-img-wrap {
-      margin: 120px auto; } }
+      margin: 120px auto 60px auto; } }
 
 .quote-wrap {
-  padding: 30px 15px;
-  background: #5fa9a9;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
+  .quote-wrap .quote {
+    padding: 30px 15px;
+    background: #5fa9a9; }
   .quote-wrap p {
     margin-bottom: 15px; }
   .quote-wrap span {
     text-transform: none; }
+  @media screen and (min-width: 62rem) {
+    .quote-wrap {
+      height: 156px; }
+      .quote-wrap .quote {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 60px; } }
+
+.home-lifestyle-wrap {
+  background: #026a74; }
+
+.home-lifestyle {
+  padding: 30px 15px; }
+  @media screen and (min-width: 62rem) {
+    .home-lifestyle {
+      padding: 120px 15px 60px 15px; } }
+  .home-lifestyle h2 {
+    margin-bottom: 30px; }
+    @media screen and (min-width: 62rem) {
+      .home-lifestyle h2 {
+        margin-bottom: 15px; } }
+  .home-lifestyle .left-hr {
+    content: "";
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background: #5fa9a9;
+    top: 32%; }
+    @media screen and (min-width: 62rem) {
+      .home-lifestyle .left-hr {
+        width: 120px; } }
+    @media screen and (min-width: 40rem) {
+      .home-lifestyle .left-hr {
+        top: 40%; } }
+    @media screen and (min-width: 62rem) {
+      .home-lifestyle .left-hr {
+        position: static; } }
+  .home-lifestyle p {
+    margin-bottom: 15px;
+    padding-left: 15px; }
+    @media screen and (min-width: 62rem) {
+      .home-lifestyle p {
+        margin-top: 15px; } }
+  .home-lifestyle .cta-grey-light {
+    padding-left: 15px; }
