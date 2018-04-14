@@ -39,6 +39,15 @@
     .h2-grey-light {
       font-size: 2rem; } }
 
+.h2-white {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0; }
+  @media screen and (min-width: 40rem) {
+    .h2-white {
+      font-size: 2rem; } }
+
 .p-white {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
@@ -185,10 +194,7 @@ body.no-scroll {
 
 .banner-img-wrap {
   height: 50vh;
-  background: url("../images/ivey.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../images/ivey.jpg") no-repeat center/cover;
   padding: 0;
   display: flex;
   align-items: flex-end; }
@@ -501,3 +507,53 @@ body.no-scroll {
     background: #026a74;
     color: white;
     font-family: "Montserrat", sans-serif; }
+
+.banner-wrap .row {
+  background: #5fa9a9; }
+
+.banner-img-wrap.why-london {
+  background: url("../images/one_london_place.jpg") no-repeat center/cover; }
+
+.page-title-wrap {
+  position: relative; }
+  @media screen and (min-width: 62rem) {
+    .page-title-wrap {
+      padding-bottom: 30px; } }
+
+.title-hr {
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background: white;
+  left: 0;
+  bottom: 16%; }
+  @media screen and (min-width: 62rem) {
+    .title-hr {
+      left: 5%;
+      bottom: 4%; } }
+
+.page-intro-img-wrap {
+  background: #5fa9a9;
+  padding-bottom: 30px; }
+  .page-intro-img-wrap img {
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+  @media screen and (min-width: 62rem) {
+    .page-intro-img-wrap {
+      margin-top: 60px; }
+      .page-intro-img-wrap img {
+        width: 273px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1; } }
+
+.page-intro-text-wrap {
+  background: #5fa9a9;
+  padding: 5px 15px 30px 15px; }
+  .page-intro-text-wrap h2 {
+    margin: 0 0 15px 0; }
+  @media screen and (min-width: 62rem) {
+    .page-intro-text-wrap {
+      margin-top: 60px;
+      padding: 80px 15px 30px 15px; } }

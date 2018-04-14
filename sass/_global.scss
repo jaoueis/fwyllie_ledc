@@ -13,6 +13,7 @@ $dark-blue: #026a74;
 $mont: 'Montserrat', sans-serif;
 $lato: 'Lato', sans-serif;
 
+//title and text
 .h1 {
     font-family: $mont;
     font-size: 1.5rem;
@@ -52,6 +53,16 @@ $lato: 'Lato', sans-serif;
     font-family: $mont;
     font-size: 1.5rem;
     color: #c4c4c4;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 2rem;
+    }
+}
+
+.h2-white {
+    font-family: $mont;
+    font-size: 1.5rem;
+    color: white;
     margin: 0;
     @media screen and (min-width: 40rem) {
         font-size: 2rem;
