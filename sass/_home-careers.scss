@@ -1,0 +1,60 @@
+.home-careers-text-wrap {
+    padding: 30px 15px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 32%;
+        @media screen and (min-width: 40rem) {
+            top: 38%;
+        }
+        @media screen and (min-width: 62rem) {
+            position: static;
+        }
+    }
+    p {
+        margin: 15px 0;
+        padding-left: 15px;
+    }
+    .cta {
+        padding-left: 15px;
+    }
+    @media screen and (min-width: 64rem) {
+        margin: 120px auto 60px auto;
+    }
+}
+
+.home-careers-img-wrap {
+    margin-bottom: 30px;
+    img {
+        width: 100%;
+    }
+    @media screen and (min-width: 64rem) {
+        margin: 120px auto 60px auto;
+    }
+}
+
+.quote-wrap {
+    text-align: center;
+    padding: 0;
+    .quote {
+        padding: 30px 15px;
+        background: $light-blue;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    span {
+        text-transform: none;
+    }
+    @media screen and (min-width: 62rem) {
+        height: 156px;
+        .quote {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 60px;
+        }
+    }
+}

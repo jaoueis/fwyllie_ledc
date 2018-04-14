@@ -1,0 +1,65 @@
+.home-stories-wrap .row {
+    background: $light-blue;
+    & > div:first-child {
+        padding: 0;
+    }
+    @media screen and (min-width: 62rem) {
+        height: 710px;
+    }
+}
+
+.home-stories-img-wrap {
+    background: url("../images/biz_guy.jpg") no-repeat center/cover;
+    height: 260px;
+    padding: 0;
+    @media screen and (min-width: 40rem) {
+        height: 420px;
+    }
+    @media screen and (min-width: 62rem) {
+        height: 710px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        position: absolute;
+        width: 100%;
+        top: -60px;
+    }
+}
+
+.home-stories-text-wrap {
+    background: $dark-blue;
+    padding: 30px 15px;
+    @media screen and (min-width: 62rem) {
+        width: 52%;
+    }
+    h2 {
+        margin-bottom: 30px;
+        @media screen and (min-width: 62rem) {
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 42%;
+        @media screen and (min-width: 40rem) {
+            top: 48%;
+        }
+        @media screen and (min-width: 62rem) {
+            position: static;
+        }
+    }
+    p {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        @media screen and (min-width: 62rem) {
+            margin: 15px 0;
+        }
+    }
+    .cta-grey-light {
+        padding-left: 15px;
+    }
+}
