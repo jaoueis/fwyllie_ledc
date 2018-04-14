@@ -1,0 +1,49 @@
+.home-careers-text-wrap {
+    padding: 30px 15px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 32%;
+        @media screen and (min-width: 40rem) {
+            top: 38%;
+        }
+        @media screen and (min-width: 62rem) {
+            position: static;
+        }
+    }
+    p {
+        margin: 15px 0;
+        padding-left: 15px;
+    }
+    .cta {
+        padding-left: 15px;
+    }
+    @media screen and (min-width: 64rem) {
+        margin: 120px auto;
+    }
+}
+
+.home-careers-img-wrap {
+    margin-bottom: 30px;
+    img {
+        width: 100%;
+    }
+    @media screen and (min-width: 64rem) {
+        margin: 120px auto;
+    }
+}
+
+.quote-wrap {
+    padding: 30px 15px;
+    background: $light-blue;
+    text-align: center;
+    p {
+        margin-bottom: 15px;
+    }
+    span {
+        text-transform: none;
+    }
+}

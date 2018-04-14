@@ -236,7 +236,7 @@ body.no-scroll {
     @media screen and (min-width: 62rem) {
       .home-why h2 {
         margin-top: 5px;
-        margin-bottom: 15px; } }
+        margin-bottom: 30px; } }
   .home-why .left-hr {
     content: "";
     width: 40px;
@@ -259,7 +259,7 @@ body.no-scroll {
     margin-bottom: 15px; }
     @media screen and (min-width: 62rem) {
       .home-why .p-grey {
-        margin: 30px 0; } }
+        margin: 15px 0; } }
   .home-why .p-grey,
   .home-why .cta {
     padding-left: 15px; }
@@ -305,7 +305,7 @@ body.no-scroll {
     @media screen and (min-width: 62rem) {
       .home-stories-text-wrap h2 {
         margin-top: 5px;
-        margin-bottom: 15px; } }
+        margin-bottom: 30px; } }
   .home-stories-text-wrap .left-hr {
     content: "";
     width: 40px;
@@ -325,7 +325,58 @@ body.no-scroll {
       .home-stories-text-wrap .left-hr {
         position: static; } }
   .home-stories-text-wrap p {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    padding-left: 15px; }
     @media screen and (min-width: 62rem) {
       .home-stories-text-wrap p {
         margin: 15px 0; } }
+  .home-stories-text-wrap .cta-grey-light {
+    padding-left: 15px; }
+
+.home-careers-text-wrap {
+  padding: 30px 15px; }
+  .home-careers-text-wrap h2 {
+    margin-bottom: 30px; }
+  .home-careers-text-wrap .left-hr {
+    content: "";
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background: #5fa9a9;
+    top: 32%; }
+    @media screen and (min-width: 62rem) {
+      .home-careers-text-wrap .left-hr {
+        width: 120px; } }
+    @media screen and (min-width: 40rem) {
+      .home-careers-text-wrap .left-hr {
+        top: 38%; } }
+    @media screen and (min-width: 62rem) {
+      .home-careers-text-wrap .left-hr {
+        position: static; } }
+  .home-careers-text-wrap p {
+    margin: 15px 0;
+    padding-left: 15px; }
+  .home-careers-text-wrap .cta {
+    padding-left: 15px; }
+  @media screen and (min-width: 64rem) {
+    .home-careers-text-wrap {
+      margin: 120px auto; } }
+
+.home-careers-img-wrap {
+  margin-bottom: 30px; }
+  .home-careers-img-wrap img {
+    width: 100%; }
+  @media screen and (min-width: 64rem) {
+    .home-careers-img-wrap {
+      margin: 120px auto; } }
+
+.quote-wrap {
+  padding: 30px 15px;
+  background: #5fa9a9;
+  text-align: center; }
+  .quote-wrap p {
+    margin-bottom: 15px; }
+  .quote-wrap span {
+    text-transform: none; }
