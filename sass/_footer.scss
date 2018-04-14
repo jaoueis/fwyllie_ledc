@@ -1,0 +1,92 @@
+.footer-wrap {
+    background: $dark-blue;
+    text-align: center;
+    .copyright {
+        padding: 0 15px 15px 15px;
+        @media screen and (min-width: 62rem) {
+            padding: 15px 15px 0 15px;
+        }
+    }
+    .footer-hr {
+        width: 90%;
+        height: 1px;
+        background: $light-blue;
+        margin: 0 auto 15px auto;
+    }
+    .span-title-white {
+        text-transform: none;
+        font-size: 1rem;
+    }
+    @media screen and (min-width: 62rem) {
+        padding: 0 15px 15px 15px;
+    }
+}
+
+.footer-upper-content {
+    padding: 80px 60px;
+    margin: 0 auto;
+    text-align: left;
+    background: url("../images/one_london_place_overlay.jpg") no-repeat center/cover;
+}
+
+.main-footer-nav {
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        .footer-nav-split {
+            flex-grow: 1;
+            li {
+                a {
+                    font-family: $lato;
+                    font-size: 1.125rem;
+                    color: white;
+                    font-weight: 300;
+                    &:hover,
+                    &:focus {
+                        color: $dark-blue;
+                        text-decoration: none;
+                    }
+                }
+                .nav-title {
+                    font-family: $mont;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: $dark-blue;
+                    text-transform: uppercase;
+                }
+                .fa {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.newsletter-wrap {
+    h2 {
+        font-family: $mont;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $dark-blue;
+        text-transform: uppercase;
+    }
+    form {
+        width: 100%;
+        margin: 15px auto 0 auto;
+        input {
+            border: none;
+            &::placeholder {
+                font-family: $lato;
+                font-weight: 300;
+            }
+        }
+        button {
+            border: none;
+            background: $dark-blue;
+            color: white;
+            font-family: $mont;
+        }
+    }
+}

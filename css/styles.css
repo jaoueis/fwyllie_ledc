@@ -429,3 +429,74 @@ body.no-scroll {
         margin-top: 15px; } }
   .home-lifestyle .cta-grey-light {
     padding-left: 15px; }
+
+.footer-wrap {
+  background: #026a74;
+  text-align: center; }
+  .footer-wrap .copyright {
+    padding: 0 15px 15px 15px; }
+    @media screen and (min-width: 62rem) {
+      .footer-wrap .copyright {
+        padding: 15px 15px 0 15px; } }
+  .footer-wrap .footer-hr {
+    width: 90%;
+    height: 1px;
+    background: #5fa9a9;
+    margin: 0 auto 15px auto; }
+  .footer-wrap .span-title-white {
+    text-transform: none;
+    font-size: 1rem; }
+  @media screen and (min-width: 62rem) {
+    .footer-wrap {
+      padding: 0 15px 15px 15px; } }
+
+.footer-upper-content {
+  padding: 80px 60px;
+  margin: 0 auto;
+  text-align: left;
+  background: url("../images/one_london_place_overlay.jpg") no-repeat center/cover; }
+
+.main-footer-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .main-footer-nav ul .footer-nav-split {
+    flex-grow: 1; }
+    .main-footer-nav ul .footer-nav-split li a {
+      font-family: "Lato", sans-serif;
+      font-size: 1.125rem;
+      color: white;
+      font-weight: 300; }
+      .main-footer-nav ul .footer-nav-split li a:hover, .main-footer-nav ul .footer-nav-split li a:focus {
+        color: #026a74;
+        text-decoration: none; }
+    .main-footer-nav ul .footer-nav-split li .nav-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #026a74;
+      text-transform: uppercase; }
+    .main-footer-nav ul .footer-nav-split li .fa {
+      margin-right: 15px; }
+
+.newsletter-wrap h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #026a74;
+  text-transform: uppercase; }
+
+.newsletter-wrap form {
+  width: 100%;
+  margin: 15px auto 0 auto; }
+  .newsletter-wrap form input {
+    border: none; }
+    .newsletter-wrap form input::placeholder {
+      font-family: "Lato", sans-serif;
+      font-weight: 300; }
+  .newsletter-wrap form button {
+    border: none;
+    background: #026a74;
+    color: white;
+    font-family: "Montserrat", sans-serif; }
