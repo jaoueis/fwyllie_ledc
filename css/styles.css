@@ -254,9 +254,7 @@ body.no-scroll {
         top: 36%; } }
     @media screen and (min-width: 62rem) {
       .home-why .left-hr {
-        position: static;
-        top: auto;
-        left: -10%; } }
+        position: static; } }
   .home-why .p-grey {
     margin-bottom: 15px; }
     @media screen and (min-width: 62rem) {
@@ -269,15 +267,45 @@ body.no-scroll {
 .home-why-gutter {
   background: #5fa9a9; }
 
+.home-stories-wrap .row {
+  background: #5fa9a9; }
+  .home-stories-wrap .row > div:first-child {
+    padding: 0; }
+  @media screen and (min-width: 62rem) {
+    .home-stories-wrap .row {
+      height: 710px; } }
+
 .home-stories-img-wrap {
   background: url("../images/biz_guy.jpg") no-repeat center/cover;
-  height: 260px; }
+  height: 260px;
+  padding: 0; }
+  @media screen and (min-width: 40rem) {
+    .home-stories-img-wrap {
+      height: 420px; } }
+  @media screen and (min-width: 62rem) {
+    .home-stories-img-wrap {
+      height: 710px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      top: -60px; } }
 
 .home-stories-text-wrap {
   background: #026a74;
   padding: 30px 15px; }
+  @media screen and (min-width: 62rem) {
+    .home-stories-text-wrap {
+      width: 52%; } }
   .home-stories-text-wrap h2 {
     margin-bottom: 30px; }
+    @media screen and (min-width: 62rem) {
+      .home-stories-text-wrap h2 {
+        margin-top: 5px;
+        margin-bottom: 15px; } }
   .home-stories-text-wrap .left-hr {
     content: "";
     width: 40px;
@@ -290,5 +318,14 @@ body.no-scroll {
     @media screen and (min-width: 62rem) {
       .home-stories-text-wrap .left-hr {
         width: 120px; } }
+    @media screen and (min-width: 40rem) {
+      .home-stories-text-wrap .left-hr {
+        top: 48%; } }
+    @media screen and (min-width: 62rem) {
+      .home-stories-text-wrap .left-hr {
+        position: static; } }
   .home-stories-text-wrap p {
     margin-bottom: 15px; }
+    @media screen and (min-width: 62rem) {
+      .home-stories-text-wrap p {
+        margin: 15px 0; } }
