@@ -467,7 +467,8 @@ body.no-scroll {
       font-family: "Lato", sans-serif;
       font-size: 1.125rem;
       color: white;
-      font-weight: 300; }
+      font-weight: 300;
+      transition: all .3s ease; }
       .main-footer-nav ul .footer-nav-split li a:hover, .main-footer-nav ul .footer-nav-split li a:focus {
         color: #026a74;
         text-decoration: none; }
