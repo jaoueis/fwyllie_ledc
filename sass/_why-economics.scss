@@ -14,8 +14,8 @@
     }
     .left-hr {
         @include left-hr;
-        background: $dark-blue;
-        top: 34%;
+        background: $light-blue;
+        top: 31%;
         left: 0;
         @media screen and (min-width: 40rem) {
             top: 46%;

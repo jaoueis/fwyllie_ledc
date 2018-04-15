@@ -1,0 +1,92 @@
+.development-wrap {
+    background: $dark-blue;
+    @media screen and (min-width: 62rem) {
+        padding: 120px 15px 60px 15px;
+    }
+}
+
+.dev-text {
+    padding: 30px 15px;
+    background: $dark-blue;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .left-hr {
+        @include left-hr;
+        background: $light-blue;
+        top: 34%;
+        @media screen and (min-width: 40rem) {
+            top: 46%;
+        }
+    }
+    @media screen and (min-width: 62rem) {
+        h2 {
+            margin-bottom: 15px;
+        }
+        .left-hr {
+            position: static;
+        }
+        p {
+            margin-top: 15px
+        }
+    }
+}
+
+.major-pro-wrap {
+    background: $light-blue;
+    padding: 30px 15px 5px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+    .major-pro-pos {
+        display: flex;
+        @media screen and (min-width: 62rem) {
+            margin-bottom: 30px;
+        }
+    }
+    img {
+        width: 100px;
+        flex-grow: 1;
+        margin-bottom: 15px;
+        @media screen and (min-width: 62rem) {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0;
+            flex-grow: 0;
+        }
+    }
+    .major-pro-desc {
+        flex-grow: 1;
+        margin-left: 15px;
+        padding-top: 30px;
+        span {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        @media screen and (min-width: 62rem) {
+            margin-left: 30px;
+            padding-top: 0;
+        }
+    }
+    .span-title-white {
+        text-transform: none;
+        font-size: 0.75rem;
+    }
+    @media screen and (min-width: 62rem) {
+        padding: 15px 15px 5px 15px;
+        height: 150px;
+        margin-top: 80px;
+    }
+}
+
+.building-permits-wrap {
+    background: $light-blue;
+    padding: 30px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+    img {
+        width: 100%;
+    }
+    @media screen and (min-width: 62rem) {
+        margin-top: 30px;
+    }
+}

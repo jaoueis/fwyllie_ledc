@@ -1,6 +1,6 @@
 .resident-wrap {
     @media screen and (min-width: 62rem) {
-        padding: 0 15px 150px 15px;
+        padding: 0 15px 0 15px;
     }
 }
 
@@ -88,6 +88,18 @@
 .why-quote-wrap {
     background: $light-blue;
     padding: 30px 15px;
-    margin-top: 120px;
+    margin-top: 30px;
     text-align: center;
+    @media screen and (min-width: 62rem) {
+        padding: 0;
+        height: 60px;
+        margin-top: 120px;
+        .why-quote {
+            position: absolute;
+            z-index: 99;
+            padding: 30px 15px;
+            background: $light-blue;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        }
+    }
 }
