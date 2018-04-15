@@ -7,12 +7,3 @@ include('sections/home-stories.html');
 include('sections/home-careers.html');
 include('sections/home-lifestyle.html');
 include('sections/footer.html');
-
-?>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/header.js"></script>
-</body>
-</html>

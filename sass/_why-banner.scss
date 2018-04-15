@@ -1,0 +1,58 @@
+.banner-wrap .row {
+    background: $light-blue;
+}
+
+.banner-img-wrap.why-london {
+    background: url("../images/one_london_place.jpg") no-repeat center/cover;
+}
+
+.page-title-wrap {
+    position: relative;
+    @media screen and (min-width: 62rem) {
+        padding-bottom: 30px;
+    }
+}
+
+.title-hr {
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background: white;
+    left: 0;
+    bottom: 16%;
+    @media screen and (min-width: 62rem) {
+        left: 5%;
+        bottom: 4%;
+    }
+}
+
+.page-intro-img-wrap {
+    background: $light-blue;
+    padding-bottom: 30px;
+    img {
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    }
+    @media screen and (min-width: 62rem) {
+        margin-top: 60px;
+        img {
+            width: 273px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+}
+
+.page-intro-text-wrap {
+    background: $light-blue;
+    padding: 5px 15px 30px 15px;
+    h2 {
+        margin: 0 0 15px 0;
+    }
+    @media screen and (min-width: 62rem) {
+        margin-top: 60px;
+        padding: 80px 15px 30px 15px;
+    }
+}

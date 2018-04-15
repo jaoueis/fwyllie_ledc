@@ -4,10 +4,7 @@
 
 .banner-img-wrap {
     height: 50vh;
-    background: url("../images/ivey.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../images/ivey.jpg") no-repeat center/cover;
     padding: 0;
     display: flex;
     align-items: flex-end;

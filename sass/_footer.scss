@@ -43,6 +43,7 @@
                     font-size: 1.125rem;
                     color: white;
                     font-weight: 300;
+                    transition: all .3s ease;
                     &:hover,
                     &:focus {
                         color: $dark-blue;
