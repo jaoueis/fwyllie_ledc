@@ -68,6 +68,16 @@
     .p-grey {
       font-size: 1.125rem; } }
 
+.p-grey-dark {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #323232;
+  margin: 0; }
+  @media screen and (min-width: 40rem) {
+    .p-grey-dark {
+      font-size: 1.125rem; } }
+
 .span-title {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
@@ -838,3 +848,48 @@ body.no-scroll {
 
 .banner-img-wrap.stories {
   background: url("../images/people.jpg") no-repeat center/cover; }
+
+.stories-content-wrap {
+  position: relative; }
+  .stories-content-wrap:before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #5fa9a9; }
+  @media screen and (min-width: 62rem) {
+    .stories-content-wrap {
+      padding: 0 15px 60px 15px; }
+      .stories-content-wrap:before {
+        height: 60px; } }
+
+.person-wrap {
+  padding: 0 15px;
+  margin-bottom: 15px; }
+  .person-wrap .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+
+.person-pos {
+  display: flex;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  background: white; }
+
+.person-img-wrap {
+  padding: 0; }
+  .person-img-wrap img {
+    width: 90%; }
+    @media screen and (min-width: 62rem) {
+      .person-img-wrap img {
+        width: 100%;
+        margin-bottom: 30px; } }
+
+.person-info-wrap {
+  display: flex;
+  align-items: center; }
+
+.person-desc {
+  margin-bottom: 15px; }
