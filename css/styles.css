@@ -893,3 +893,6 @@ body.no-scroll {
 
 .person-desc {
   margin-bottom: 15px; }
+
+.banner-img-wrap.careers {
+  background: url("../images/job_image.jpeg") no-repeat center/cover; }
