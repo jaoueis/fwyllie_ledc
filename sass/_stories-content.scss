@@ -1,0 +1,54 @@
+.stories-content-wrap {
+    position: relative;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $light-blue;
+    }
+    @media screen and (min-width: 62rem) {
+        padding: 0 15px 60px 15px;
+        &:before {
+            height: 60px;
+        }
+    }
+}
+
+.person-wrap {
+    padding: 0 15px;
+    margin-bottom: 15px;
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.person-pos {
+    display: flex;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    background: white;
+}
+
+.person-img-wrap {
+    padding: 0;
+    img {
+        width: 90%;
+        @media screen and (min-width: 62rem) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.person-info-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.person-desc {
+    margin-bottom: 15px;
+}

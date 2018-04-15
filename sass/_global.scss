@@ -91,6 +91,17 @@ $lato: 'Lato', sans-serif;
     }
 }
 
+.p-grey-dark {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #323232;
+    margin: 0;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
 .span-title {
     font-family: $lato;
     font-size: 1rem;
