@@ -533,7 +533,7 @@ body.no-scroll {
 
 .title-hr {
   position: absolute;
-  width: 120px;
+  width: 40px;
   height: 3px;
   background: white;
   left: 0;
@@ -541,7 +541,8 @@ body.no-scroll {
   @media screen and (min-width: 62rem) {
     .title-hr {
       left: 5%;
-      bottom: 4%; } }
+      bottom: 4%;
+      width: 120px; } }
 
 .page-intro-img-wrap {
   background: #5fa9a9;
@@ -834,3 +835,6 @@ body.no-scroll {
   @media screen and (min-width: 62rem) {
     .building-permits-wrap {
       margin-top: 30px; } }
+
+.banner-img-wrap.stories {
+  background: url("../images/people.jpg") no-repeat center/cover; }
