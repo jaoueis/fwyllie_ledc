@@ -115,6 +115,18 @@ $lato: 'Lato', sans-serif;
     }
 }
 
+.span-title-grey {
+    font-family: $lato;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #959595;
+    margin: 0;
+    text-transform: uppercase;
+    @media screen and (min-width: 40rem) {
+        font-size: 1.125rem;
+    }
+}
+
 .cta {
     font-family: $lato;
     font-size: 1rem;
