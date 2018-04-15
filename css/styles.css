@@ -599,9 +599,11 @@ body.no-scroll {
     @media screen and (min-width: 62rem) {
       .economic-text-wrap .left-hr {
         position: static; } }
-  @media screen and (min-width: 62rem) {
-    .economic-text-wrap p {
-      margin-top: 15px; } }
+  .economic-text-wrap p {
+    padding-left: 15px; }
+    @media screen and (min-width: 62rem) {
+      .economic-text-wrap p {
+        margin-top: 15px; } }
 
 .wage-wrap {
   background: #026a74;
@@ -652,3 +654,87 @@ body.no-scroll {
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); } }
   .mission-wrap p {
     margin-top: 15px; }
+
+@media screen and (min-width: 62rem) {
+  .resident-wrap {
+    padding: 0 15px 150px 15px; } }
+
+.resident-text {
+  padding: 30px 15px; }
+  .resident-text h2 {
+    margin-bottom: 30px; }
+    @media screen and (min-width: 62rem) {
+      .resident-text h2 {
+        margin-bottom: 15px; } }
+  .resident-text .left-hr {
+    content: "";
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background: #5fa9a9;
+    top: 36%; }
+    @media screen and (min-width: 62rem) {
+      .resident-text .left-hr {
+        width: 120px; } }
+    @media screen and (min-width: 40rem) {
+      .resident-text .left-hr {
+        top: 46%; } }
+    @media screen and (min-width: 62rem) {
+      .resident-text .left-hr {
+        position: static; } }
+  .resident-text p {
+    padding-left: 15px; }
+    @media screen and (min-width: 62rem) {
+      .resident-text p {
+        margin-top: 15px;
+        margin-bottom: 30px; } }
+
+.pop-growth-wrap {
+  background: #026a74;
+  padding: 30px 15px 5px 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+  .pop-growth-wrap img {
+    width: 100%;
+    margin-bottom: 15px; }
+  .pop-growth-wrap span {
+    text-transform: none;
+    font-size: 0.75rem; }
+
+.age-wrap {
+  background: #026a74;
+  padding: 30px 15px 5px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+  .age-wrap .median-age {
+    text-align: center; }
+    .age-wrap .median-age > span:first-child {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: none; }
+    .age-wrap .median-age > span:last-child {
+      font-size: 0.75rem;
+      text-transform: none;
+      float: left; }
+  .age-wrap .age-stats {
+    display: flex;
+    margin-bottom: 15px; }
+    .age-wrap .age-stats span {
+      font-size: 2rem;
+      font-weight: 400; }
+  .age-wrap .ldn,
+  .age-wrap .can {
+    flex-grow: 1; }
+  @media screen and (min-width: 62rem) {
+    .age-wrap {
+      padding: 15px 15px 5px 15px;
+      position: absolute; }
+      .age-wrap .median-age {
+        width: 100%; } }
+
+.why-quote-wrap {
+  background: #5fa9a9;
+  padding: 30px 15px;
+  margin-top: 120px;
+  text-align: center; }
