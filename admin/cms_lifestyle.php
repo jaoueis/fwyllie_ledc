@@ -39,7 +39,7 @@ if (isset($_POST["newLifestyle"])) {
 $fetch_lifeStyle = "SELECT * FROM lifestyle";
 $lifestyle      = mysqli_query($link, $fetch_lifeStyle);
 if ($lifestyle) {
-    $lifestyle_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Category</th><th>Title</th><th>Content</th><th></th><th></th></tr></thead><tbody>'";
+    $lifestyle_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Category</th><th>Title</th><th>Content</th><th></th><th></th></tr></thead><tbody><br>";
     while ($row = mysqli_fetch_array($lifestyle)) {
         $lifestyle_table .= "<tr><td>" . $row["lifestyle_id"] .
                             "</td><td>" . $row["category"] .

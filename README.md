@@ -6,11 +6,18 @@ The site is built for London Economic Development Corporation (LEDC). LEDC is co
 ### Feature
 
 + Customized Content Management System
-    - Multiple site web admin management 
-    - Allowing users to edit users information
-    - Friendly CMS user interface
-    - Welcome email for signing up
-    - System greeting based on time
+    - User management
+    	1. Create User
+    	2. Edit User
+    	3. Delete User
+    - Content management
+    	1. Career 
+    	2. Lifestyle
+    	3. Company info
+    - Statistic
+    	1. Google chart
+    - Email to new user
+    	Notice: If the email feature is not working, please check the URL of anchor tag is changed based on current project name (localhost:8888/project_name_folder/admin/login.php) in file: /admin/cms_user_functions.php at line 19.
 
 ### Test Environment
 
@@ -21,33 +28,9 @@ The site is built for London Economic Development Corporation (LEDC). LEDC is co
 - After the dev dependencies are installed, open MAMP/WAMP/XAMPP and start the server and phpmyadmin.
 - Go to myPHPadmin panel first to import the database file stored in **db** folder.
 
-*Note that if you are using a PC, make sure to change config php to Windows mode*
-
 
 ### Test Instruction
 - Fire up the project in MAMP/WAMP/XAMP. 
 - You can browse on the front page or go CMS by entering URL `http://localhost:8888/fwyllie_ledc/admin/login.php`
-- The initial admin username is `admin` and password is `123`.
+- The initial admin username is `admin` and password is `admin`.
 - Then make sure everything is working. 
-# fwyllie_ledc
-
-
-#CMS
-
-## Default user
-Account: admin
-password: admin
-
-## CMS Overview
-1. User management
-	1.1 Create User
-	1.2 Edit User
-	1.3 Delete User
-2. Content management
-	2.1 Career 
-	2.2 Lifestyle
-	2.3 Company info
-3. Statistic
-	3.1 Google chart
-4. Email to new user
-	Notice: If the email feature is not working, please check the URL of anchor tag is changed based on current project name (localhost:8888/project_name_folder/admin/login.php) in file: /admin/cms_user_functions.php at line 19.

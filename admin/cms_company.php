@@ -63,7 +63,7 @@ if (isset($_POST["newCompany"])) {
 $fetch_company = "SELECT * FROM company_info";
 $company      = mysqli_query($link, $fetch_company);
 if ($company) {
-    $company_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Name</th><th>Address</th><th>Postal</th><th>Latitude</th><th>Longitude</th><th>Brief</th><th></th><th></th></tr></thead><tbody>'";
+    $company_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Name</th><th>Address</th><th>Postal</th><th>Latitude</th><th>Longitude</th><th>Brief</th><th></th><th></th></tr></thead><tbody><br>";
     while ($row = mysqli_fetch_array($company)) {
         $company_table .= "<tr><td>" . $row["company_id"] .
                             "</td><td>" . $row["company_name"] .
