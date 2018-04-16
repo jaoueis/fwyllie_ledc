@@ -974,3 +974,52 @@ body.no-scroll {
 @media screen and (min-width: 62rem) {
   .job-first-desc p {
     padding: 15px; } }
+
+.banner-img-wrap.lifestyle {
+  background: url("../images/event.jpg") no-repeat center/cover; }
+
+.video-wrap {
+  background: #5fa9a9;
+  padding-bottom: 30px; }
+  .video-wrap video {
+    width: 100%; }
+    @media screen and (min-width: 62rem) {
+      .video-wrap video {
+        width: 90%;
+        margin: 0 auto;
+        display: block; } }
+
+.lifestyle-content {
+  padding: 30px 15px; }
+  @media screen and (min-width: 62rem) {
+    .lifestyle-content {
+      padding: 60px 15px 0 15px;
+      position: relative; }
+      .lifestyle-content:after {
+        content: "";
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        background: #026a74;
+        left: 0;
+        bottom: 0;
+        z-index: -1; } }
+  .lifestyle-content.right {
+    background: #026a74; }
+    .lifestyle-content.right:after {
+      background: white;
+      z-index: 1; }
+
+.ls-img img {
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+  @media screen and (min-width: 62rem) {
+    .ls-img img {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      z-index: 9; } }
+
+.ls-desc {
+  margin-top: 15px; }
