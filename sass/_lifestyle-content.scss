@@ -1,0 +1,42 @@
+.lifestyle-content {
+    padding: 30px 15px;
+    @media screen and (min-width: 62rem) {
+        padding: 60px 15px 0 15px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            background: $dark-blue;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    &.right {
+        background: $dark-blue;
+        &:after {
+            background: white;
+            z-index: 1;
+        }
+    }
+}
+
+.ls-img {
+    img {
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        @media screen and (min-width: 62rem) {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            z-index: 9;
+        }
+    }
+}
+
+.ls-desc {
+    margin-top: 15px;
+}

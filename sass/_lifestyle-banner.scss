@@ -1,0 +1,16 @@
+.banner-img-wrap.lifestyle {
+    background: url("../images/event.jpg") no-repeat center/cover;
+}
+
+.video-wrap {
+    background: $light-blue;
+    padding-bottom: 30px;
+    video {
+        width: 100%;
+        @media screen and (min-width: 62rem) {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
