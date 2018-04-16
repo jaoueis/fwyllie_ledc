@@ -1,0 +1,35 @@
+.contact-wrap {
+    padding: 30px 15px;
+    [type="submit"] {
+        margin-top: 15px;
+        background: $dark-blue;
+        border: none;
+        font-family: $mont;
+        font-size: 1.5rem;
+        color: white;
+        transition: all .3s ease;
+        &:hover,
+        &:focus {
+            border: solid 1px $dark-blue;
+            background: white;
+            color: $dark-blue;
+        }
+    }
+}
+
+.form_input {
+    border: solid 1px $light-blue;
+    width: 100%;
+}
+
+.map-wrap {
+    @include center-children;
+    padding: 30px 15px;
+    iframe{
+        width: 340px;
+        height: 400px;
+        @media screen and (min-width: 62rem){
+            width: 100%;
+        }
+    }
+}

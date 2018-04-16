@@ -1023,3 +1023,34 @@ body.no-scroll {
 
 .ls-desc {
   margin-top: 15px; }
+
+.contact-wrap {
+  padding: 30px 15px; }
+  .contact-wrap [type="submit"] {
+    margin-top: 15px;
+    background: #026a74;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .3s ease; }
+    .contact-wrap [type="submit"]:hover, .contact-wrap [type="submit"]:focus {
+      border: solid 1px #026a74;
+      background: white;
+      color: #026a74; }
+
+.form_input {
+  border: solid 1px #5fa9a9;
+  width: 100%; }
+
+.map-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px; }
+  .map-wrap iframe {
+    width: 340px;
+    height: 400px; }
+    @media screen and (min-width: 62rem) {
+      .map-wrap iframe {
+        width: 100%; } }
