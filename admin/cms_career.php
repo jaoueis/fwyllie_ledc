@@ -9,7 +9,7 @@ if (isset($_POST["updateCareer"])) {
         $companyName  = $_POST["company"];
         $category     = $_POST["category"];
         $title        = $_POST["title"];
-        $content      = $_POST["content"];
+        $content      = mysqli_real_escape_string($link, $_POST["content"]);
         $checkCompany = $link->query("SELECT company_id FROM company_info WHERE company_name = '$companyName'");
         if ($checkCompany->num_rows > 0) {
             $company    = mysqli_fetch_array($checkCompany);
@@ -31,7 +31,7 @@ if (isset($_POST["newCareer"])) {
     if (!empty(trim($_POST["company"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"])) && !empty(trim($_POST["category"]))) {
         $companyName  = $_POST["company"];
         $title        = $_POST["title"];
-        $content      = $_POST["content"];
+        $content      = mysqli_real_escape_string($link, $_POST["content"]);
         $category     = $_POST["category"];
         $checkCompany = $link->query("SELECT company_id FROM company_info WHERE company_name = '$companyName'");
         if ($checkCompany->num_rows > 0) {

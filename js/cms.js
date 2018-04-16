@@ -73,6 +73,7 @@ $(document).ready(function () {
         $.get('cms_fetch_data.php?content=company&getData=' + $(this).attr('id'), function (data) {
             $('#companyId').val(data.company_id);
             $('#companyName').val(data.company_name);
+            $('#companyCat').val(data.company_category);
             $('#postal').val(data.postal);
             $('#companyAddr').val(data.address);
             $('#companyLat').val(data.company_latitude);
