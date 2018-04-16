@@ -63,6 +63,7 @@ $(document).ready(function () {
             $('#lifestyleId').val(data.lifestyle_id);
             $('#lfCategory').val(data.category);
             $('#lfTitle').val(data.lifestyle_title);
+            $('#lfImage').val(data.lifestyle_image);
             $('#lfContent').text(data.lifestyle_content);
         });
         e.preventDefault();

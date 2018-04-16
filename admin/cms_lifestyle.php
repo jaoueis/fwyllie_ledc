@@ -4,12 +4,13 @@ require("session.php");
 require("connection.php");
 
 if (isset($_POST["updateLifestyle"])) {
-    if (!empty(trim($_POST["id"])) && !empty(trim($_POST["category"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"]))) {
+    if (!empty(trim($_POST["id"])) && !empty(trim($_POST["category"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["image"])) && !empty(trim($_POST["content"]))) {
         $id            = $_POST["id"];
         $category      = $_POST["category"];
         $title         = $_POST["title"];
-        $content       = $_POST["content"];
-        $editLifestyle = $link->query("UPDATE lifestyle SET category='$category', lifestyle_title = '$title', lifestyle_content = '$content' WHERE lifestyle_id = '$id'");
+        $image         = $_POST["image"];
+        $content       = mysqli_real_escape_string($link, $_POST["content"]);
+        $editLifestyle = $link->query("UPDATE lifestyle SET category='$category', lifestyle_title='$title', lifestyle_image='$image', lifestyle_content='$content' WHERE lifestyle_id='$id'");
         if ($editLifestyle) {
             $successmessage = "Update lifestyle information successful.";
         } else {
@@ -21,11 +22,12 @@ if (isset($_POST["updateLifestyle"])) {
 }
 
 if (isset($_POST["newLifestyle"])) {
-    if (!empty(trim($_POST["category"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"]))) {
-        $category      = $_POST["category"];
-        $title         = $_POST["title"];
-        $content       = $_POST["content"];
-        $addLifestyle = $link->query("INSERT INTO lifestyle (category, lifestyle_title, lifestyle_content) VALUES ('$category', '$title', '$content')");
+    if (!empty(trim($_POST["category"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["image"])) && !empty(trim($_POST["content"]))) {
+        $category     = $_POST["category"];
+        $title        = $_POST["title"];
+        $image        = $_POST["image"];
+        $content      = mysqli_real_escape_string($link, $_POST["content"]);
+        $addLifestyle = $link->query("INSERT INTO lifestyle (category, lifestyle_title, lifestyle_image, lifestyle_content) VALUES ('$category', '$title', '$image', '$content')");
         if ($addLifestyle) {
             $successmessage = "Add new lifestyle information successful.";
         } else {
@@ -37,13 +39,14 @@ if (isset($_POST["newLifestyle"])) {
 }
 
 $fetch_lifeStyle = "SELECT * FROM lifestyle";
-$lifestyle      = mysqli_query($link, $fetch_lifeStyle);
+$lifestyle       = mysqli_query($link, $fetch_lifeStyle);
 if ($lifestyle) {
-    $lifestyle_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Category</th><th>Title</th><th>Content</th><th></th><th></th></tr></thead><tbody><br>";
+    $lifestyle_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Category</th><th>Title</th><th>Image path</th><th>Content</th><th></th><th></th></tr></thead><tbody><br>";
     while ($row = mysqli_fetch_array($lifestyle)) {
         $lifestyle_table .= "<tr><td>" . $row["lifestyle_id"] .
                             "</td><td>" . $row["category"] .
                             "</td><td>" . $row["lifestyle_title"] .
+                            "</td><td>" . $row["lifestyle_image"] .
                             "</td><td>" . $row["lifestyle_content"] .
                             "</td><td><a class='btn btn-sm btn-info selectLifestyle' href='#' id='" . $row["lifestyle_id"] . "'>Select</a>" .
                             "</td><td><a class='btn btn-sm btn-danger' href='caller.php?caller_id=deleteLifestyle&id=" . $row["lifestyle_id"] . "'>Remove</a></td></tr>";
@@ -60,7 +63,7 @@ if ($lifestyle) {
 <title>Lifestyle</title>
 <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Rozha+One" rel="stylesheet">
 <link rel="stylesheet" href="../css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
 <link rel="stylesheet" href="../css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/cms.css">
 </head>
@@ -78,13 +81,17 @@ if ($lifestyle) {
             </div>
             <div class="form-group col-md-6">
                 <label for="lfCategory">Category:</label>
-                <input type="text" class="form-control" name="category" id="lfCategory"/>
+                <input type="text" class="form-control" name="category" id="lfCategory" />
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-6">
                 <label for="lfTitle">Title:</label>
-                <input type="text" class="form-control" name="title" id="lfTitle"/>
+                <input type="text" class="form-control" name="title" id="lfTitle" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lfImage">Image path:</label>
+                <input type="text" class="form-control" name="image" id="lfImage" />
             </div>
         </div>
         <div class="form-row">
@@ -94,7 +101,7 @@ if ($lifestyle) {
             </div>
         </div>
         <?php if (!empty($errormessage)) {
-            echo "<p class='errorMsg'>" . $errormessage . "</p>";
+            echo "<p class='errorMsg'>" . $errormessage . mysqli_connect_error() . "</p>";
         } ?>
         <?php if (!empty($successmessage)) {
             echo "<p class='successMsg'>" . $successmessage . "</p>";
