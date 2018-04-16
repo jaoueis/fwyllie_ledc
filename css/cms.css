@@ -1,0 +1,167 @@
+.loginBox {
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #cecece;
+    box-shadow: 16px 11px 0 #cecece
+}
+
+span {
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px 0;
+    background: #124db9;
+    color: #ffffff;
+    margin: 0;
+
+}
+
+a, a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.inputError {
+    color: red;
+    text-align: center;
+}
+
+input[type=submit], .backBtn {
+    border: 2px solid #555555;
+    padding: 10px;
+    color: #000000;
+    background: #ffffff;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.backBtn:hover, input[type=submit]:hover {
+    background: #555555;
+    color: #ffffff;
+}
+
+.adminPanel, .createUser, .editUser {
+    width: 60%;
+    margin: 50px 20%;
+    background: #ffffff;
+    border: 1px solid #cecece;
+    box-shadow: 16px 11px 0px #cecece;
+    overflow: auto;
+}
+
+.adminPanel h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #00cc33;
+}
+
+.adminPanel h4{
+    margin: 10px 0;
+    padding: 5px;
+    background: #555555;
+    color: #ffffff;
+    text-align: center;
+}
+
+.createUser h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #0052cc;
+}
+
+.createUser, .editUser{
+    padding: 10px;
+}
+
+.editUser h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #cc5c00;
+}
+
+.greetings {
+    text-align: center;
+    font-size: 150%;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.last-time-login{
+    text-align: right;
+    padding: 10px;
+}
+
+.navigation {
+    background: #474747;
+    overflow: auto;
+}
+
+.navigation a {
+    padding: 15px;
+    background: #1968b3;
+    float: right;
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover{
+    padding-left: 25px;
+    color: #ffffff;
+    background: #0c3861;
+}
+
+.createForm {
+    margin: 20px 0 0 0;
+}
+
+.errorMsg {
+    color: red;
+    text-align: center;
+}
+
+.successMsg {
+    color: #00b637;
+    text-align: center;
+}
+
+.inline-rows {
+    overflow: auto;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+}
+
+.right {
+    float: right;
+    margin: 0 5px;
+}
+
+.cmsPanel {
+    width: 80%;
+    margin: 20px 10%;
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #cecece;
+    box-shadow: 16px 11px 0px #cecece;
+    overflow: auto;
+}
+
+form{
+    padding: 10px;
+}
