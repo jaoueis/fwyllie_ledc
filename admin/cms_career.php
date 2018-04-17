@@ -4,16 +4,17 @@ require("session.php");
 require("connection.php");
 
 if (isset($_POST["updateCareer"])) {
-    if (!empty(trim($_POST["career"])) && !empty(trim($_POST["company"])) && !empty(trim($_POST["category"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"]))) {
+    if (!empty(trim($_POST["career"])) && !empty(trim($_POST["company"])) && !empty(trim($_POST["category"])) && !empty(trim($_POST["image"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"]))) {
         $careerId     = $_POST["career"];
         $companyName  = $_POST["company"];
         $category     = $_POST["category"];
+        $image        = $_POST["image"];
         $title        = $_POST["title"];
         $content      = mysqli_real_escape_string($link, $_POST["content"]);
         $checkCompany = $link->query("SELECT company_id FROM company_info WHERE company_name = '$companyName'");
         if ($checkCompany->num_rows > 0) {
             $company    = mysqli_fetch_array($checkCompany);
-            $editCareer = $link->query("UPDATE careers SET company_id = '$company[company_id]', job_category='$category', job_title='$title', job_desc='$content' WHERE career_id = '$careerId'");
+            $editCareer = $link->query("UPDATE careers SET company_id = '$company[company_id]', job_category='$category', job_image='$image', job_title='$title', job_desc='$content' WHERE career_id = '$careerId'");
             if ($editCareer) {
                 $successmessage = "Update career information successful.";
             } else {
@@ -28,16 +29,17 @@ if (isset($_POST["updateCareer"])) {
 }
 
 if (isset($_POST["newCareer"])) {
-    if (!empty(trim($_POST["company"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"])) && !empty(trim($_POST["category"]))) {
+    if (!empty(trim($_POST["company"])) && !empty(trim($_POST["title"])) && !empty(trim($_POST["content"])) && !empty(trim($_POST["category"])) && !empty(trim($_POST["image"]))) {
         $companyName  = $_POST["company"];
         $title        = $_POST["title"];
         $content      = mysqli_real_escape_string($link, $_POST["content"]);
         $category     = $_POST["category"];
+        $image     = $_POST["image"];
         $checkCompany = $link->query("SELECT company_id FROM company_info WHERE company_name = '$companyName'");
         if ($checkCompany->num_rows > 0) {
             $company = mysqli_fetch_array($checkCompany);
 
-            $addCareer = $link->query("INSERT INTO careers (company_id, job_title, job_desc, job_category) VALUES ('$company[company_id]', '$title', '$content', '$category')");
+            $addCareer = $link->query("INSERT INTO careers (company_id, job_title, job_desc, job_category, job_image) VALUES ('$company[company_id]', '$title', '$content', '$category', '$image')");
             if ($addCareer) {
                 $successmessage = "Create career information successful.";
             } else {
@@ -54,11 +56,12 @@ if (isset($_POST["newCareer"])) {
 $fetch_careers = "SELECT * FROM careers c INNER JOIN company_info i ON i.company_id = c.company_id";
 $careers       = mysqli_query($link, $fetch_careers);
 if ($careers) {
-    $career_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Company</th><th>Job Category</th><th>Title</th><th>Content</th><th></th><th></th></tr></thead><tbody><br>";
+    $career_table = "<table class='table table-sm cmsTables'><thead><tr class='bg-primary'><th>ID</th><th>Company</th><th>Job Category</th><th>Job Image</th><th>Title</th><th>Content</th><th></th><th></th></tr></thead><tbody><br>";
     while ($row = mysqli_fetch_array($careers)) {
         $career_table .= "<tr><td>" . $row["career_id"] .
                          "</td><td>" . $row["company_name"] .
                          "</td><td>" . $row["job_category"] .
+                         "</td><td>" . $row["job_image"] .
                          "</td><td>" . $row["job_title"] .
                          "</td><td>" . $row["job_desc"] .
                          "</td><td><a class='btn btn-sm btn-info selectCareer' href='#' id='" . $row["career_id"] . "'>Select</a>" .
@@ -99,6 +102,10 @@ if ($careers) {
             <div class="form-group col-md-3">
                 <label for="jobCategory">Job Category:</label>
                 <input type="text" class="form-control" name="category" id="jobCategory" />
+            </div>
+            <div class="form-group col-md-3">
+                <label for="jobImage">Job Image Path:</label>
+                <input type="text" class="form-control" name="image" id="jobImage" />
             </div>
         </div>
         <div class="form-row">

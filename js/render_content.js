@@ -1,9 +1,40 @@
 $(document).ready(function () {
     $.get('admin/fetch_data.php?data=career', function (data) {
-        $('#slot1').html(data[0].statistic_desc);
-        $('#slot2').html(data[1].statistic_desc);
-        $('#slot3').html(data[2].statistic_desc);
-        $('#slot4').html(data[3].statistic_desc);
+        var companies = {};
+        data.forEach(function (current) {
+            if (!companies.hasOwnProperty(current.company_name)) {
+                companies[current.company_name] = {
+                    'jobs'            : [],
+                    'company_brief'   : current.company_brief,
+                    'company_name'    : current.company_name,
+                    'company_category': current.company_category
+                };
+            }
+            companies[current.company_name]['jobs'].push(current);
+        });
+        var is_left = true;
+        for (var company in companies) {
+            if (!companies.hasOwnProperty(company)) {
+                continue;
+            }
+            console.log(company);
+
+                if (is_left) {
+                    $('.company-handle').append('<div class="container-fluid company-wrap"><section class="row"><div class="col-12 col-lg-4 company-info-wrap"><span class="span-title">' + companies[company]['company_category'] + '</span><h2 class="h2-blue company-name">' + company + '</h2><p class="p-grey">' + companies[company]['company_brief'] + '</p></div><div class="col-12 col-lg-8 job-info-wrap row"></div></section></div>');
+                } else {
+                    $('.company-handle').append('<div class="container-fluid company-wrap right"><section class="row"><div class="col-12 col-lg-8 order-12 order-lg-1 job-info-wrap row"></div><div class="col-12 col-lg-4  order-1 order-lg-12 company-info-wrap"><span class="span-title-white">' + companies[company]['company_category'] + '</span><h2 class="h2-grey-light">' + company + '</h2><p class="p-white">' + companies[company]['company_brief'] + '</p></div></section></div>');
+                }
+
+            companies[company]['jobs'].forEach(function (currentJob) {
+                //console.log(currentJob);
+
+                var html_snippet = '<div class="job-first-wrap col-lg-5 offset-lg-1 row"><div class="job-first-img col-6 col-lg-12"><img src="images/' + currentJob.job_image + '" alt="' + currentJob.job_title + '"></div><div class="job-first-info col-6 col-lg-12"><div class="job-first-info-pos"><span class="span-title-grey">' + company + '</span><h2 class="h2-blue">' + currentJob.job_title + '</h2></div></div><div class="col-lg-12 job-first-desc d-none d-lg-block"><p class="p-grey-dark">' + currentJob.job_desc + '</p></div></div>';
+                $('.job-info-wrap').append(html_snippet);
+
+                console.log(html_snippet);
+            });
+            is_left = !is_left;
+        }
     });
     $.get('admin/fetch_data.php?data=lifestyle', function (data) {
         var i;

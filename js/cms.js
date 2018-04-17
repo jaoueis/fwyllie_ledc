@@ -52,6 +52,7 @@ $(document).ready(function () {
             $('#careerId').val(data.career_id);
             $('#companyId').val(data.company_name);
             $("#jobCategory").val(data.job_category);
+            $("#jobImage").val(data.job_image);
             $('#jobTitle').val(data.job_title);
             $('#jobIntro').text(data.job_desc);
         });
