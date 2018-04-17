@@ -42,7 +42,7 @@ CREATE TABLE `admin_group` (
 
 LOCK TABLES `admin_group` WRITE;
 /*!40000 ALTER TABLE `admin_group` DISABLE KEYS */;
-INSERT INTO `admin_group` VALUES ('admin','$2y$10$mSR1yxHkbc2vn.HZEbu0Ze.fwUUWe3l7YgjHYcYHo4BCxtSYuOFd.','Administrator','sxjin1103@gmail.com','::1','Super Manager','2018-04-16 00:30:08','unlimited','no'),('kelly','$2y$10$RLSGcxD2w5USQ0bR0iwU3uojwazmoX4IYwyJXpyeEl2bG48FBb/vS','kelly','kelly001@gmail.com','::1','Administrator','2018-04-13 02:05:31','unlimited','no');
+INSERT INTO `admin_group` VALUES ('admin','$2y$10$mSR1yxHkbc2vn.HZEbu0Ze.fwUUWe3l7YgjHYcYHo4BCxtSYuOFd.','Administrator','sxjin1103@gmail.com','::1','Super Manager','2018-04-17 11:21:28','unlimited','no'),('kelly','$2y$10$RLSGcxD2w5USQ0bR0iwU3uojwazmoX4IYwyJXpyeEl2bG48FBb/vS','kelly','kelly001@gmail.com','::1','Administrator','2018-04-13 02:05:31','unlimited','no');
 /*!40000 ALTER TABLE `admin_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,7 +154,7 @@ CREATE TABLE `lifestyle` (
 
 LOCK TABLES `lifestyle` WRITE;
 /*!40000 ALTER TABLE `lifestyle` DISABLE KEYS */;
-INSERT INTO `lifestyle` VALUES (1,'family fun','East Park','family-fun.jpg','East Park is a unique multi faceted facility centred on an 18 hole executive golf course and water park with picturesque picnic areas. East Park combines various activities including go karts, batting cages driving range, mini golf, indoor rock climbing, bumper cars, jungle gym and arcade games. East Park prides itself on having something for everyone and our goal is that people of all ages can play side by side.'),(2,'food & drink','Toboggan Brewing Co.','food.jpg','The origin of our name isn’t just a trendy ode to Canadian. It is a tip of the toque to our Forest City heritage, which was a tobogganing mecca in the late 1800’s. It’s in this spirit of toboganning, where people from London and area come together to have fun and enjoy locally made beer and food, that we bring you the Toboggan Brewing Company.'),(3,'sports & recreation','Boler Mountain','boler.png','Boler Mountain is a not for profit organization governed by a volunteer Board of Directors serving London and area since 1946. Terrain for all ability levels featuring 15 distinct runs served by 3 quad chairlifts and magic carpet lift on our beginner hill with an extensive snowmaking system covering 100% of our trails. Full rental shop and equipment service shop. '),(8,'museums & galleries','Museum London','museums.jpg','For more than 70 years, Museum London has preserved, interpreted and shared the story of London and Londoners through the exhibition of art and artifacts and the presentation of public programs. Museum London is home to 45,000+ regional historical artifacts detailing a fascinating record of London\'s economic achievements, and our citizens\' accomplishments. ');
+INSERT INTO `lifestyle` VALUES (1,'family fun','East Park','family-fun.jpg','East Park is a unique multi faceted facility centred on an 18 hole executive golf course and water park with picturesque picnic areas. East Park combines various activities including go karts, batting cages driving range, mini golf, indoor rock climbing, bumper cars, jungle gym and arcade games. East Park prides itself on having something for everyone and our goal is that people of all ages can play side by side.'),(2,'food & drink','Toboggan Brewing Co.','food.jpg','The origin of our name isn’t just a trendy ode to Canadian. It is a tip of the toque to our Forest City heritage, which was a tobogganing mecca in the late 1800’s. It’s in this spirit of toboganning, where people from London and area come together to have fun and enjoy locally made beer and food, that we bring you the Toboggan Brewing Company.'),(3,'sports & recreation','Boler Mountain','boler.jpg','Boler Mountain is a not for profit organization governed by a volunteer Board of Directors serving London and area since 1946. Terrain for all ability levels featuring 15 distinct runs served by 3 quad chairlifts and magic carpet lift on our beginner hill with an extensive snowmaking system covering 100% of our trails. Full rental shop and equipment service shop. '),(8,'museums & galleries','Museum London','museums.jpg','For more than 70 years, Museum London has preserved, interpreted and shared the story of London and Londoners through the exhibition of art and artifacts and the presentation of public programs. Museum London is home to 45,000+ regional historical artifacts detailing a fascinating record of London\'s economic achievements, and our citizens\' accomplishments. ');
 /*!40000 ALTER TABLE `lifestyle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,7 +179,7 @@ CREATE TABLE `login_attempt` (
 
 LOCK TABLES `login_attempt` WRITE;
 /*!40000 ALTER TABLE `login_attempt` DISABLE KEYS */;
-INSERT INTO `login_attempt` VALUES (1,'::1',2);
+INSERT INTO `login_attempt` VALUES (1,'::1',3);
 /*!40000 ALTER TABLE `login_attempt` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -192,4 +192,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-17  0:00:42
+-- Dump completed on 2018-04-17 12:29:40
