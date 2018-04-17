@@ -20,17 +20,17 @@ $(document).ready(function () {
             }
             //console.log(company);
 
-                if (is_left) {
-                    $('.company-handle').append('<div class="container-fluid company-wrap"><section class="row"><div class="col-12 col-lg-4 company-info-wrap"><span class="span-title">' + companies[company]['company_category'] + '</span><h2 class="h2-blue company-name">' + company + '</h2><p class="p-grey">' + companies[company]['company_brief'] + '</p></div><div class="col-12 col-lg-8 job-info-wrap row"></div></section></div>');
-                } else {
-                    $('.company-handle').append('<div class="container-fluid company-wrap right"><section class="row"><div class="col-12 col-lg-8 order-12 order-lg-1 job-info-wrap row"></div><div class="col-12 col-lg-4  order-1 order-lg-12 company-info-wrap"><span class="span-title-white">' + companies[company]['company_category'] + '</span><h2 class="h2-grey-light">' + company + '</h2><p class="p-white">' + companies[company]['company_brief'] + '</p></div></section></div>');
-                }
+            if (is_left) {
+                $('.company-handle').append('<div class="container-fluid company-wrap"><section class="row"><div class="col-12 col-lg-4 company-info-wrap"><span class="span-title">' + companies[company]['company_category'] + '</span><h2 class="h2-blue company-name">' + company + '</h2><p class="p-grey">' + companies[company]['company_brief'] + '</p></div><div class="col-12 col-lg-8 job-info-wrap row" id="' + company + '"></div></section></div>');
+            } else {
+                $('.company-handle').append('<div class="container-fluid company-wrap right"><section class="row"><div class="col-12 col-lg-8 order-12 order-lg-1 job-info-wrap row" id="' + company + '"></div><div class="col-12 col-lg-4  order-1 order-lg-12 company-info-wrap"><span class="span-title-white">' + companies[company]['company_category'] + '</span><h2 class="h2-grey-light">' + company + '</h2><p class="p-white">' + companies[company]['company_brief'] + '</p></div></section></div>');
+            }
 
             companies[company]['jobs'].forEach(function (currentJob) {
                 //console.log(companies[company]['company_name']);
 
                 var html_snippet = '<div class="job-first-wrap col-lg-5 offset-lg-1 row"><div class="job-first-img col-6 col-lg-12"><img src="images/' + currentJob.job_image + '" alt="' + currentJob.job_title + '"></div><div class="job-first-info col-6 col-lg-12"><div class="job-first-info-pos"><span class="span-title-grey">' + companies[company]['company_name'] + '</span><h2 class="h2-blue">' + currentJob.job_title + '</h2></div></div><div class="col-lg-12 job-first-desc d-none d-lg-block"><p class="p-grey-dark">' + currentJob.job_desc + '</p></div></div>';
-                $('.job-info-wrap').append(html_snippet);
+                $('#' + company).append(html_snippet);
 
                 //console.log(html_snippet);
             });
